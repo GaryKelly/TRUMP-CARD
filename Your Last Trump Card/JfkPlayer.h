@@ -1,21 +1,25 @@
 #include <iostream>
 #include <SFML/Graphics.hpp>
-
+#include "Globals.h"
+#include "Block.h"
 #pragma once
 
 
 class Player
 {
 public:
-	double posX = 200;
-	double posY = 200;
+	enum direction{Left, Right, Up, Down};
+	
+	Block block;
+	
+	double posX = 45;
+	double posY = 0;
 
 	float deltaTime = 0;
 
 	bool animationControl = false;
 
-	int jfkStance = 1; //will control what sprite to use
-	
+	int jfkStance = 1;
 
 	sf::Texture jFKTex;
 	sf::Sprite jFKSprite1;
@@ -39,6 +43,7 @@ public:
 
 	void keyinput();
 	void initSprites();
+	void readWalls();
 
 	sf::Vector2f getPosition();
 

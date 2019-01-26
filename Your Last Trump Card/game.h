@@ -14,6 +14,7 @@ public:
 	
 	Player jfk;
 
+	bool noMovement = false;
 
 	Game();
 	~Game();

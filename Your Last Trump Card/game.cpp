@@ -73,9 +73,11 @@ void Game::loadLevel1()
 			{
 				mazeLv1[i][j].setTextureFloor();
 			}
-			else
+			else if(level1[i][j] == 1)
 			{
 				mazeLv1[i][j].setTextureWall();
+				
+				
 			}
 			mazeLv1[i][j].setPos(sf::Vector2f(i*BLOCK_H_AND_W, j*BLOCK_H_AND_W));
 		}

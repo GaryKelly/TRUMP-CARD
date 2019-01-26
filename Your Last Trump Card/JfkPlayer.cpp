@@ -2,7 +2,6 @@
 
 Player::Player()
 {
-
 	initSprites();
 
 }
@@ -13,6 +12,7 @@ void Player::update(sf::Time t_dt)
 	jFKstances();
 	animate(t_dt);
 	jFKSprite1.setPosition(posX,posY);
+
 	
 }
 
@@ -30,21 +30,25 @@ void Player::breakWalls()
 void Player::moveLeft()
 {//moves left
 	posX = posX--;
+	direction::Left;
 }
 
 void Player::moveRight()
 {//moves right
 	posX = posX++;
+	direction::Right;
 }
 
 void Player::moveUp()
 {//moves up
 	posY = posY--;
+	direction::Up;
 }
 
 void Player::moveDown()
 {//moves down
 	posY = posY++;
+	direction::Down;
 }
 
 void Player::jFKstances()
@@ -172,7 +176,7 @@ void Player::initSprites()
 	jFKSprite1.setPosition(posX, posY);
 	sf::IntRect jfkRect(5, 0, 32, 40);
 	jFKSprite1.setTextureRect(jfkRect);
-	jFKSprite1.setScale(1.5, 1.5);
+	jFKSprite1.setScale(1, 1);
 
 
 	
@@ -181,6 +185,27 @@ void Player::initSprites()
 	
 }
 
+void Player::readWalls()
+{
+	for (int x = 0; x < 10; x++)
+	{
+		for (int y = 0; y < 10; y++)
+		{
+		
+		}
+	}
+
+}
+//1, 1, 1, 1, 1, 1, 1, 1, 1, 1,   // row 1
+//0, 0, 1, 0, 0, 1, 0, 0, 0, 1,   // row 2
+//1, 0, 1, 1, 0, 1, 1, 1, 0, 1,   // row 3
+//1, 0, 0, 0, 0, 0, 1, 0, 0, 1,   // row 4
+//1, 1, 1, 0, 1, 1, 1, 0, 1, 1,   // row 5
+//1, 0, 1, 0, 0, 1, 0, 0, 0, 1,   // row 6
+//1, 0, 0, 1, 0, 1, 0, 1, 0, 1,   // row 7
+//1, 1, 0, 0, 0, 1, 0, 1, 0, 1,   // row 8
+//1, 1, 1, 1, 0, 0, 0, 1, 0, 0,   // row 9
+//1, 1, 1, 1, 1, 1, 1, 1, 1, 1 }
 sf::Vector2f Player::getPosition()
 {
 	return jFKSprite1.getPosition();
