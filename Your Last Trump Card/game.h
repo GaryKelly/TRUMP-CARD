@@ -1,14 +1,23 @@
 // @Author Dylan Curran
 #pragma once
 
+#include "Trump.h"
 #include <SFML/Graphics.hpp>
+#include "JfkPlayer.h"
 #include "Globals.h"
 #include "Block.h"
+
+
 
 
 class Game
 {
 public:
+
+	Trump DTrump;
+	
+	Player jfk;
+
 
 	Game();
 	~Game();

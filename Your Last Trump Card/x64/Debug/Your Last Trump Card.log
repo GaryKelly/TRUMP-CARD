@@ -1,0 +1,6 @@
+﻿  game.cpp
+  JfkPlayer.cpp
+c:\users\gamejam\desktop\trump-card\your last trump card\jfkplayer.cpp(8): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+  main.cpp
+  Generating Code...
+sfml-graphics-d.lib(sfml-graphics-d-2.dll) : fatal error LNK1112: module machine type 'x86' conflicts with target machine type 'x64'

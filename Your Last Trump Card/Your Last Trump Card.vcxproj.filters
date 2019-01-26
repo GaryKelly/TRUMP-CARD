@@ -21,6 +21,8 @@
     <ClCompile Include="game.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Trump.cpp">
+    <ClCompile Include="JfkPlayer.cpp">
     <ClCompile Include="Block.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -29,6 +31,8 @@
     <ClInclude Include="game.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Trump.h">
+    <ClInclude Include="JfkPlayer.h">
     <ClInclude Include="Block.h">
       <Filter>Header Files</Filter>
     </ClInclude>
