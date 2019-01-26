@@ -3,9 +3,13 @@
 #define GAME
 
 #include <SFML/Graphics.hpp>
+#include "JfkPlayer.h"
 class Game
 {
 public:
+	
+	Player jfk;
+
 
 	Game();
 	~Game();

@@ -37,15 +37,22 @@ void Game::processEvents()
 		{
 			m_window.close();
 		}
+		
 	}
 }
 
 void Game::update(sf::Time t_deltaTime)
 {
+	jfk.update(t_deltaTime);
 }
 
 void Game::render()
 {
+	m_window.clear(sf::Color(0,0,0,0));
 
+	jfk.render(m_window);
+
+
+	m_window.display();
 }
 
