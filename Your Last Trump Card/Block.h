@@ -4,10 +4,10 @@
 class Block
 {
 private:
-	bool m_wall;
+	bool m_wall{false};
 	sf::Texture m_texture;
 	sf::Sprite m_sprite;
-	
+	sf::Color m_alpha = sf::Color(0, 0, 0, 225);
 	sf::Vector2f m_pos;
 public:
 	Block();
@@ -20,5 +20,8 @@ public:
 	{
 		t_window.draw(m_sprite);
 	}
+	bool isWall() { return m_wall; }
+	void makeTransparent();
+	void cancelTransparency();
 
 };
