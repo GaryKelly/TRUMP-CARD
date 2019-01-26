@@ -2,11 +2,13 @@
 #ifndef GAME
 #define GAME
 
+#include "Trump.h"
 #include <SFML/Graphics.hpp>
+
 class Game
 {
 public:
-
+	Trump DTrump;
 	Game();
 	~Game();
 	/// <summary>

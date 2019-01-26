@@ -42,10 +42,17 @@ void Game::processEvents()
 
 void Game::update(sf::Time t_deltaTime)
 {
+	DTrump.updateTrump(t_deltaTime);
+	if (sf::Keyboard::isKeyPressed(sf::Keyboard::D))
+	{
+		DTrump.kill();
+	}
 }
 
 void Game::render()
 {
-
+	m_window.clear(sf::Color::Black);
+	DTrump.draw(m_window);
+	m_window.display();
 }
 
