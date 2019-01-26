@@ -123,13 +123,19 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Block.cpp" />
     <ClCompile Include="game.cpp" />
     <ClCompile Include="JfkPlayer.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Block.h" />
     <ClInclude Include="game.h" />
+<<<<<<< HEAD
     <ClInclude Include="JfkPlayer.h" />
+=======
+    <ClInclude Include="Globals.h" />
+>>>>>>> 2c05119d27a0e0c93e872db13d85c43f82ed071f
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
