@@ -3,9 +3,10 @@
 #include <iostream>
 
 Game::Game()
-	: m_window{ sf::VideoMode(800,800), "Trump Card" }// , sf::Style::Fullscreen }
+	: m_window{ sf::VideoMode(800,800), "Trump Card" } 
+	// , sf::Style::Fullscreen }
 {
-
+	loadLevel1();
 }
 Game::~Game()
 {
@@ -46,6 +47,35 @@ void Game::update(sf::Time t_deltaTime)
 
 void Game::render()
 {
+	m_window.clear();
 
+	for (int i = 0; i < LEVEL1SQ; i++)
+	{
+		for (int j = 0; j < LEVEL1SQ; j++)
+		{
+			mazeLv1[i][j].draw(m_window);
+		}
+	}
+	
+	m_window.display();
+}
+
+void Game::loadLevel1()
+{
+	for (int i = LEVEL1SQ-1; i >= 0; i--)
+	{
+		for (int j = LEVEL1SQ-1; j >= 0; j--)
+		{
+			if (level1[i][j] == 0)
+			{
+				mazeLv1[i][j].setTextureFloor();
+			}
+			else
+			{
+				mazeLv1[i][j].setTextureWall();
+			}
+			mazeLv1[i][j].setPos(sf::Vector2f(i*BLOCK_H_AND_W, j*BLOCK_H_AND_W));
+		}
+	}
 }
 
