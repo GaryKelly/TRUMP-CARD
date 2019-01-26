@@ -5,8 +5,8 @@ class Trump
 {
 private:
 	const int m_SPEEDWAGON = 1;
-	float m_posX = 10.0f;
-	float m_posY = 10.0f;
+	float m_posX = 42.0f;
+	float m_posY = 1.0f;
 	int m_sap = 0;
 	int m_trumpX = 1;
 	int m_trumpY = 1;

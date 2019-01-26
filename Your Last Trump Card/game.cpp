@@ -55,8 +55,7 @@ void Game::update(sf::Time t_deltaTime)
 void Game::render()
 {
 	m_window.clear(sf::Color::Black);
-	DTrump.draw(m_window);
-
+	
 	
 	for (int i = 0; i < LEVEL1SQ; i++)
 	{
@@ -66,6 +65,8 @@ void Game::render()
 		}
 	}
 	jfk.render(m_window);
+	DTrump.draw(m_window);
+
 	m_window.display();
 }
 

@@ -132,12 +132,9 @@
   <ItemGroup>
     <ClInclude Include="Block.h" />
     <ClInclude Include="game.h" />
-<<<<<<< HEAD
     <ClInclude Include="Trump.h" />
-=======
     <ClInclude Include="JfkPlayer.h" />
     <ClInclude Include="Globals.h" />
->>>>>>> e1e491ecd6db4b47176dd7dabd036cd02d336d86
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
