@@ -92,6 +92,7 @@ void Game::update(sf::Time t_deltaTime)
 			gameLevel = Level::LEVEL2;
 		}
 	}
+<<<<<<< HEAD
 	if (gameLevel == Level::LEVEL4)
 	{
 		if (jfk.getPosition().y > 420 - 20)
@@ -100,6 +101,9 @@ void Game::update(sf::Time t_deltaTime)
 			gameLevel = Level::LEVEL3;
 		}
 	}
+=======
+	DTrump.updateTrump(t_deltaTime);
+>>>>>>> 35c1edde3b3f17678c2724053db13860789c2e10
 	jfk.update(t_deltaTime);
 }
 
