@@ -70,10 +70,6 @@ void Game::update(sf::Time t_deltaTime)
 		gameLevel = Level::LEVEL4;
 	}
 	DTrump.updateTrump(t_deltaTime);
-	if (sf::Keyboard::isKeyPressed(sf::Keyboard::D))
-	{
-		DTrump.kill();
-	}
 	jfk.update(t_deltaTime);
 }
 
