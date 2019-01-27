@@ -1,9 +1,8 @@
 #include "Block.h"
 
 
-Block::Block()
+Block::Block() 
 {
-
 }
 
 Block::~Block()
@@ -42,4 +41,14 @@ void Block::setPos(sf::Vector2f t_pos)
 {
 	m_pos = t_pos;
 	m_sprite.setPosition(m_pos);
+}
+
+void Block::makeTransparent()
+{
+	m_sprite.setColor ( sf::Color( m_sprite.getColor() - m_alpha));
+}
+
+void Block::cancelTransparency()
+{
+	m_sprite.setColor ( sf::Color(m_sprite.getColor() + m_alpha));
 }
