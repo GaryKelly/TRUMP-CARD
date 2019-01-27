@@ -38,6 +38,7 @@ private:
 	void loadLevel3();
 	void loadLevel4();
 	void playSound();
+	void death();
 	void changeLevel1();
 	void changeLevel2();
 	void changeLevel3();
@@ -48,6 +49,9 @@ private:
 	Block mazeLv3[LEVEL1SQ][LEVEL1SQ];
 	Block mazeLv4[LEVEL1SQ][LEVEL1SQ];
 	Level gameLevel;
+
+	sf::SoundBuffer buffOof;
+	sf::Sound oof;
 
 	sf::SoundBuffer backingTrack;
 	sf::Sound backMyTrack;

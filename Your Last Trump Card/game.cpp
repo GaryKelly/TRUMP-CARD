@@ -60,6 +60,11 @@ void Game::processEvents()
 void Game::update(sf::Time t_deltaTime)
 {
 
+	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Q))
+	{
+		death();
+	}
+
 	if (gameLevel==Level::LEVEL1)
 	{
 		if (jfk.getPosition().y > 420 - 20 )
@@ -277,6 +282,19 @@ void Game::playSound()
 		backMyTrack.play();
 		trumpSong = true;
 	}
+}
+
+void Game::death()
+{
+	if (!buffOof.loadFromFile("ASSETS/AUDIO/death.wav"))
+	{
+		std::cout << "no oof" << std::endl;
+	}
+	oof.setBuffer(buffOof);
+	oof.setVolume(50);
+	oof.setLoop(false);
+	oof.play();
+	DTrump.kill();
 }
 
 void Game::changeLevel1()
