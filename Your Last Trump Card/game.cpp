@@ -57,7 +57,6 @@ void Game::processEvents()
 
 void Game::update(sf::Time t_deltaTime)
 {
-<<<<<<< HEAD
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::C))
 	{
 		gameLevel = Level::LEVEL2;
@@ -70,27 +69,19 @@ void Game::update(sf::Time t_deltaTime)
 	{
 		gameLevel = Level::LEVEL4;
 	}
-=======
 	DTrump.updateTrump(t_deltaTime);
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::D))
 	{
 		DTrump.kill();
 	}
 	jfk.update(t_deltaTime);
->>>>>>> e3b85b31c3ff54aaa358c8e74912dab53a070da0
 }
 
 void Game::render()
 {
-<<<<<<< HEAD
-	m_window.clear();
-	switch (gameLevel)
-=======
+
 	m_window.clear(sf::Color::Black);
-	
-	
-	for (int i = 0; i < LEVEL1SQ; i++)
->>>>>>> e3b85b31c3ff54aaa358c8e74912dab53a070da0
+	switch (gameLevel)
 	{
 	case Level::LEVEL1:
 		for (int i = 0; i < LEVEL1SQ; i++)
@@ -151,15 +142,12 @@ void Game::render()
 		break;
 	default:
 		break;
+		
 	}
-<<<<<<< HEAD
 
 	
-=======
 	jfk.render(m_window);
 	DTrump.draw(m_window);
-
->>>>>>> e3b85b31c3ff54aaa358c8e74912dab53a070da0
 	m_window.display();
 }
 
