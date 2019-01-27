@@ -35,6 +35,10 @@ private:
 	void loadLevel2();
 	void loadLevel3();
 	void loadLevel4();
+	void changeLevel1();
+	void changeLevel2();
+	void changeLevel3();
+	void changeLevel4();
 	sf::RenderWindow m_window;
 	Block mazeLv1[LEVEL1SQ][LEVEL1SQ];
 	Block mazeLv2[LEVEL1SQ][LEVEL1SQ];

@@ -57,22 +57,48 @@ void Game::processEvents()
 
 void Game::update(sf::Time t_deltaTime)
 {
-	if (sf::Keyboard::isKeyPressed(sf::Keyboard::C))
+
+	if (gameLevel==Level::LEVEL1)
 	{
-		gameLevel = Level::LEVEL2;
+		if (jfk.getPosition().y > 420 - 20 )
+		{
+			changeLevel2();
+			gameLevel = Level::LEVEL2;
+		}
 	}
-	if (sf::Keyboard::isKeyPressed(sf::Keyboard::B))
+	if (gameLevel == Level::LEVEL2)
 	{
-		gameLevel = Level::LEVEL3;
+		if (jfk.getPosition().y < 420-20)
+		{
+			changeLevel1();
+			gameLevel = Level::LEVEL1;
+		}
+		if (jfk.getPosition().x > 420-20)
+		{
+			changeLevel3();
+			gameLevel = Level::LEVEL3;
+		}
 	}
-	if (sf::Keyboard::isKeyPressed(sf::Keyboard::M))
+	if (gameLevel == Level::LEVEL3)
 	{
-		gameLevel = Level::LEVEL4;
+		if (jfk.getPosition().y < 420 - 20)
+		{
+			changeLevel4();
+			gameLevel = Level::LEVEL4;
+		}
+		if (jfk.getPosition().x < 420 - 20)
+		{
+			changeLevel2();
+			gameLevel = Level::LEVEL2;
+		}
 	}
-	DTrump.updateTrump(t_deltaTime);
-	if (sf::Keyboard::isKeyPressed(sf::Keyboard::D))
+	if (gameLevel == Level::LEVEL4)
 	{
-		DTrump.kill();
+		if (jfk.getPosition().y > 420 - 20)
+		{
+			changeLevel3();
+			gameLevel = Level::LEVEL3;
+		}
 	}
 	jfk.update(t_deltaTime);
 }
@@ -227,5 +253,85 @@ void Game::loadLevel4()
 			mazeLv4[i][j].setPos(sf::Vector2f((i*BLOCK_H_AND_W)+420, j*BLOCK_H_AND_W));
 		}
 	}
+}
+
+void Game::changeLevel1()
+{
+	for (int i = 0; i < 10; i++)
+	{
+		for (int j = 0; j < 10; j++)
+		{
+			mazeLv1[i][j].cancelTransparency();
+			mazeLv2[i][j].makeTransparent();
+		}
+	}
+}
+
+void Game::changeLevel2()
+{
+	if (gameLevel == Level::LEVEL1)
+	{
+		for (int i = 0; i < 10; i++)
+		{
+			for (int j = 0; j < 10; j++)
+			{
+				mazeLv2[i][j].cancelTransparency();
+				mazeLv1[i][j].makeTransparent();
+			}
+		}
+	}
+	else if (gameLevel == Level::LEVEL3)
+	{
+		for (int i = 0; i < 10; i++)
+		{
+			for (int j = 0; j < 10; j++)
+			{
+				mazeLv2[i][j].cancelTransparency();
+				mazeLv3[i][j].makeTransparent();
+			}
+		}
+	}
+}
+
+void Game::changeLevel3()
+{
+	if (gameLevel == Level::LEVEL2)
+	{
+		for (int i = 0; i < 10; i++)
+		{
+			for (int j = 0; j < 10; j++)
+			{
+				mazeLv3[i][j].cancelTransparency();
+				mazeLv2[i][j].makeTransparent();
+			}
+		}
+	}
+	else if (gameLevel == Level::LEVEL4)
+	{
+		for (int i = 0; i < 10; i++)
+		{
+			for (int j = 0; j < 10; j++)
+			{
+				mazeLv3[i][j].cancelTransparency();
+				mazeLv4[i][j].makeTransparent();
+			}
+		}
+	}
+}
+
+void Game::changeLevel4()
+{
+	if (gameLevel == Level::LEVEL3)
+	{
+		for (int i = 0; i < 10; i++)
+		{
+			for (int j = 0; j < 10; j++)
+			{
+				mazeLv4[i][j].cancelTransparency();
+				mazeLv3[i][j].makeTransparent();
+			}
+		}
+	}
+
 }
 
