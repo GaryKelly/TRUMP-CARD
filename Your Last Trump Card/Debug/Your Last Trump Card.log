@@ -1,8 +1,0 @@
-﻿  game.cpp
-c:\users\gameuser\desktop\temp ggj\trump-card\your last trump card\game.cpp(173): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-c:\users\gameuser\desktop\temp ggj\trump-card\your last trump card\game.cpp(192): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-c:\users\gameuser\desktop\temp ggj\trump-card\your last trump card\game.cpp(211): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-c:\users\gameuser\desktop\temp ggj\trump-card\your last trump card\game.cpp(230): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-  main.cpp
-  Generating Code...
-  Your Last Trump Card.vcxproj -> C:\Users\gameuser\Desktop\temp ggj\TRUMP-CARD\Your Last Trump Card\Debug\Your Last Trump Card.exe
