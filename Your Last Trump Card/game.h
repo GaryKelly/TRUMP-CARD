@@ -6,7 +6,7 @@
 #include "JfkPlayer.h"
 #include "Globals.h"
 #include "Block.h"
-
+#include <SFML/Audio.hpp>
 
 
 
@@ -19,6 +19,8 @@ public:
 	Player jfk;
 
 	bool noMovement = false;
+
+
 
 	Game();
 	~Game();
@@ -35,12 +37,18 @@ private:
 	void loadLevel2();
 	void loadLevel3();
 	void loadLevel4();
+	void playSound();
 	sf::RenderWindow m_window;
 	Block mazeLv1[LEVEL1SQ][LEVEL1SQ];
 	Block mazeLv2[LEVEL1SQ][LEVEL1SQ];
 	Block mazeLv3[LEVEL1SQ][LEVEL1SQ];
 	Block mazeLv4[LEVEL1SQ][LEVEL1SQ];
 	Level gameLevel;
+
+	sf::SoundBuffer backingTrack;
+	sf::Sound backMyTrack;
+
+	bool trumpSong = false;
 };
 
 

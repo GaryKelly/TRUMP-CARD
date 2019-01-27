@@ -7,14 +7,14 @@ Trump::Trump()
 
 void Trump::initSprite()
 {
-	if (!m_TextTrump.loadFromFile("TrumpSpriteSheet.png"))
+	if (!m_TextTrump.loadFromFile("ASSETS/IMAGES/TrumpSpriteSheet.png"))
 	{
 		std::cout << "Watch out he doesn't have a trumpet" << std::endl;
 	}
 	m_Trump.setTexture(m_TextTrump);
 	trumpBoi = (sf::IntRect(m_trumpX, m_trumpY,42,42));
 	m_Trump.setTextureRect(trumpBoi);
-	m_Trump.setPosition(m_posX, m_posY);
+	m_Trump.setPosition(m_position);
 }
 
 void Trump::updateTrump(sf::Time t_deltaTime)

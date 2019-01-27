@@ -20,6 +20,8 @@ Game::Game()
 		}
 	}
 	gameLevel = Level::LEVEL1;
+
+
 }
 Game::~Game()
 {
@@ -71,6 +73,7 @@ void Game::update(sf::Time t_deltaTime)
 	}
 	DTrump.updateTrump(t_deltaTime);
 	jfk.update(t_deltaTime);
+
 }
 
 void Game::render()
@@ -143,8 +146,12 @@ void Game::render()
 
 	
 	jfk.render(m_window);
-	DTrump.draw(m_window);
+	if (gameLevel == Level::LEVEL4)
+	{
+		DTrump.draw(m_window);
+	}
 	m_window.display();
+	playSound();
 }
 
 void Game::loadLevel1()
@@ -222,6 +229,22 @@ void Game::loadLevel4()
 			}
 			mazeLv4[i][j].setPos(sf::Vector2f((i*BLOCK_H_AND_W)+420, j*BLOCK_H_AND_W));
 		}
+	}
+}
+
+void Game::playSound()
+{
+	if (trumpSong == false)
+	{
+		if (!backingTrack.loadFromFile("ASSETS/AUDIO/backingtrack.wav"))
+		{
+			std::cout << "I cannee hear" << std::endl;
+		}
+		backMyTrack.setBuffer(backingTrack);
+		backMyTrack.setVolume(10);
+		backMyTrack.setLoop(true);
+		backMyTrack.play();
+		trumpSong = true;
 	}
 }
 
