@@ -7,6 +7,7 @@
     <ClCompile Include="game.cpp">
       <Filter>Source</Filter>
     </ClCompile>
+    <ClCompile Include="Trump.cpp">
     <ClCompile Include="JfkPlayer.cpp">
       <Filter>Source</Filter>
     </ClCompile>
@@ -15,6 +16,11 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="game.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Trump.h">
+    <ClInclude Include="JfkPlayer.h">
     <ClInclude Include="Block.h">
       <Filter>Include</Filter>
     </ClInclude>
@@ -26,6 +32,7 @@
     </ClInclude>
     <ClInclude Include="JfkPlayer.h">
       <Filter>Include</Filter>
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

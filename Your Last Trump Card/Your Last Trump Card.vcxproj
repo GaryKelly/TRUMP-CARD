@@ -127,10 +127,12 @@
     <ClCompile Include="game.cpp" />
     <ClCompile Include="JfkPlayer.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Trump.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Block.h" />
     <ClInclude Include="game.h" />
+    <ClInclude Include="Trump.h" />
     <ClInclude Include="JfkPlayer.h" />
     <ClInclude Include="Globals.h" />
   </ItemGroup>
